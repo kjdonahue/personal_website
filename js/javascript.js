@@ -55,7 +55,7 @@ function enlargePhoto(event) {
         var url = 'https://api.flickr.com/services/rest/?jsoncallback=?';
 
         var settings = $.extend( {
-            api_key: 'aeda2b39f3ef21354552421c8a04241c', // TODO KYLE replace this with your own api key
+            api_key: '278dbaaf2b2331ecb4b9a308290d67e4',
             user_id: '162412704@N08', // Kyle's user id
             photoset_id: '72157704053325964', // Kyle's photoset id
             per_page: 100

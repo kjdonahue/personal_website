@@ -12,7 +12,7 @@
     background-image: url("./pics/patagonia.jpg");
 }
 .content.contact {
-    background-image: url("./pics/flowers.jpg");
+    background-image: url("./pics/dark_leaves.jpg");
 }
 
 .about .description,
@@ -37,12 +37,12 @@
 
 .contact .description .contact-list li a {
     text-decoration: none;
-    color: #561930;
-    transition:color .5s linear;
+    color: #000000;
+    transition:color .2s linear;
 }
 .contact .description .contact-list li a:hover {
     color: #1b88c6;
-    transition:color .5s linear;
+    transition:color .2s linear;
 }
 
 .contact .description .contact-list i {
