@@ -1,0 +1,63 @@
+.content.about,
+.content.contact {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    flex-grow: 1; /* for keeping footer on bottom */
+    margin: 0;
+}
+
+.content.about {
+    background-image: url("./pics/patagonia.jpg");
+}
+.content.contact {
+    background-image: url("./pics/flowers.jpg");
+}
+
+.about .description,
+.contact .description {
+    background-color: #f4f4f4;
+    padding: .3rem 2rem;
+    width: 70%;
+    max-width: 40rem;
+    margin: 8vh auto 0 auto;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.contact .description .contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact .description .contact-list li {
+    list-style-type: none;
+    padding: 0.5rem 0;
+}
+
+.contact .description .contact-list li a {
+    text-decoration: none;
+    color: #561930;
+    transition:color .5s linear;
+}
+.contact .description .contact-list li a:hover {
+    color: #1b88c6;
+    transition:color .5s linear;
+}
+
+.contact .description .contact-list i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    margin-right: .3rem;
+}
+
+/*--------------------- MEDIA QUERIES ---------------------*/
+/* for changing window size */
+/*  GO FULL WIDTH AT LESS THAN 730 PIXELS */
+
+@media only screen and (max-width: 800px) {
+    .about .description {
+        width: 83%;
+        max-width: none;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="portfolio"/>
+        <title>Kyle Donahue</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script>
+        <link href = "styles/styles.css" type="text/css" rel = "stylesheet">
+        <link href = "styles/header.css" type="text/css" rel = "stylesheet">
+        <link href = "styles/overlay.css" type="text/css" rel = "stylesheet">
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    </head>
+    <body>
+        <header class="no-shrink">
+            <section class="name">
+                <h1><a href="index.html">Kyle Donahue</a></h1>
+            </section>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="content no-shrink">
+            <div id="gallery"></div>
+            <div id="overlay-photo">
+                <div class="overlay-background" onclick="minimizePhoto()"></div>
+                <div class="photo">
+                    <img id="enlargedPhoto" src="" alt="photo" />
+                    </div>
+                <div class="arrow-box left" id="left-arrow" onclick="navigateLeft()">
+                    <img src="./styles/pics/chevron-left-wht.png" class="arrow" alt="left-arrow" />
+                    </div>
+                <div class="arrow-box right" id="right-arrow" onclick="navigateRight()">
+                    <img src="./styles/pics/chevron-right-wht.png" class="arrow" alt="right-arrow" />
+                </div>
+            </div>
+        </section>
+        <footer class="no-shrink">
+            <p><span class="copyright">©</span> Kyle Donahue 2018. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+/*
+cool colors
+teal    #1b88c6
+maroon  #561930
+*/
+
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    /* all for stretching page to full height and putting footer on bottom: */
+    /* DOCS https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.content {
+    width: 70%;
+    flex-grow: 1; /* for keeping footer on bottom */
+    margin: .5rem auto .5rem auto;
+}
+
+/* prevents flex items from getting smaller when content is larger than screen */
+.no-shrink {
+    flex-shrink: 0;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#gallery ul li {
+    width: 33.33%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#gallery img {
+    width: calc(100% - 1rem);
+    padding: 0 .5rem;
+}
+
+footer {
+    width: calc(100% - 2rem);
+    background-color: lightgrey;
+    padding: .3rem 1rem;
+    color: #561930;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+footer p {
+    margin: .5rem 0;
+}
+
+footer .copyright {
+    font-size: 1.5rem;
+}
+
+/*--------------------- MEDIA QUERIES ---------------------*/
+/* for changing window size */
+/*  GO FULL WIDTH AT LESS THAN 800 PIXELS */
+
+@media only screen and (max-width: 800px) {
+    .content {
+        width: 98%;
+    }
+    #gallery ul li {
+        width: 100%;
+        padding-bottom: .5rem;
+    }
+}
