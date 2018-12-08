@@ -62,7 +62,6 @@ function enlargePhoto(event) {
         }, options);
 
         return this.each(function() {
-
             var gallery = $(this);
             gallery.addClass('flickr-gallery');
             gallery.append('<div class="viewport"></div><div class="browser"><ul></ul></div><div class="clear"></div>');
@@ -95,8 +94,7 @@ function enlargePhoto(event) {
             }).fail(function(state) {
                 alert("Unable to retrieve photos.");
             });
-    });
-
+        });
     };
 })( jQuery );
 

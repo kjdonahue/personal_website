@@ -53,8 +53,7 @@
 
 /*--------------------- MEDIA QUERIES ---------------------*/
 /* for changing window size */
-/*  GO FULL WIDTH AT LESS THAN 730 PIXELS */
-
+/* GO FULL WIDTH AT LESS THAN 800 PIXELS */
 @media only screen and (max-width: 800px) {
     .about .description {
         width: 83%;
