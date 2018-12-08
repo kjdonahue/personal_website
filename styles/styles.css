@@ -53,13 +53,13 @@ body {
 footer {
     width: calc(100% - 2rem);
     background-color: lightgrey;
-    padding: .3rem 1rem;
+    padding: 0 1rem;
     color: #561930;
     font-family: 'Ubuntu Mono', monospace;
 }
 
 footer p {
-    margin: .5rem 0;
+    margin: .2rem 0 .5rem 0;
 }
 
 footer .copyright {

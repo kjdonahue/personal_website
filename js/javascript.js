@@ -100,11 +100,22 @@ function enlargePhoto(event) {
     };
 })( jQuery );
 
-// if user hits ESC while viewing enlarged photo, minimize it
+// handle keypress events if enlarged photo is showing
 $(document).keyup(function(e) {
-    if (e.keyCode === 27) {
-        if (document.getElementById('overlay-photo').style.display === 'block') {
-            minimizePhoto()
+    if (document.getElementById('overlay-photo').style.display === 'block') {
+        switch(e.keyCode) {
+            // ESC
+            case 27:
+                minimizePhoto();
+                break;
+            // Left arrow
+            case 37:
+                navigateLeft();
+                break;
+            // Right arrow
+            case 39:
+                navigateRight();
+                break;
         }
     }
 });

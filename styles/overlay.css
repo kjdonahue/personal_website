@@ -26,10 +26,26 @@
     width: 50vw; /*just to give a viewable size */
 }
 
+.photo-x {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* adds extra padding to bottom and left so it has a larger clickable area */
+    padding: .5rem 1rem 1.5rem 1.5rem;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: .3;
+}
+.photo-x:hover {
+    opacity: 1;
+}
+
 .arrow-box {
     position: fixed;
     opacity: .3;
-    width: 15vw;
+    width: 5vw;
     top: 0;
     height: 100vh;
     padding: 4rem;
