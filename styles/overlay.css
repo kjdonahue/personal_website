@@ -27,7 +27,7 @@
 }
 
 .photo-x {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     /* adds extra padding to bottom and left so it has a larger clickable area */
