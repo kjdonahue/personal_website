@@ -12,6 +12,10 @@
     display: none;
 }
 
+#enlargedPhoto.portrait {
+    width: calc(75% - 1rem);
+}
+
 .photo {
     position: fixed;
     margin-left: calc(50% - 25% - .5rem);

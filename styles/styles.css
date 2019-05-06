@@ -50,6 +50,10 @@ body {
     padding: 0 .5rem;
 }
 
+#gallery img.portrait {
+    width: calc(56% - 1rem);
+}
+
 footer {
     width: calc(100% - 2rem);
     background-color: lightgrey;
