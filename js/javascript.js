@@ -43,7 +43,8 @@ function enlargePhoto(event) {
             state.selectedPhotoIndex = index;
         }
 
-        setOverlayPhotoSrc(state.photos[index].url_o);
+        // setOverlayPhotoSrc(state.photos[index].url_o);
+        setOverlayPhotoSrc('./styles/pics/kyle3.jpg');
 
         $('body').find($('#overlay-photo')).fadeIn(400);
     }

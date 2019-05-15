@@ -12,18 +12,28 @@
     display: none;
 }
 
-.photo {
+.overlay-photo-and-arrows {
     position: fixed;
-    margin-left: calc(50% - 25% - .5rem);
-    margin-top: 14vh;
-    left: 0;
+    width: 100%;
+    height: 100%;
     top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo {
+    text-align: center;
 }
 
 .photo img {
     background-color: white;
     padding: .5rem;
-    width: 50vw; /*just to give a viewable size */
+    /* this works to contain large photos regardless of portrait or landscape, but if they are small idk */
+    max-height: 90vh;
+    max-width: 60vw;
 }
 
 .photo-x {
@@ -43,10 +53,8 @@
 }
 
 .arrow-box {
-    position: fixed;
     opacity: .3;
     width: 5vw;
-    top: 0;
     height: 100vh;
     padding: 4rem;
 }
