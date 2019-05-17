@@ -51,7 +51,8 @@ body {
 }
 
 #gallery img.portrait {
-    width: calc(56% - 1rem);
+    width: auto;
+    height: 15vw;
 }
 
 footer {
@@ -80,5 +81,9 @@ footer .copyright {
     #gallery ul li {
         width: 100%;
         padding-bottom: .5rem;
+    }
+
+    #gallery img.portrait {
+        height: 100%;
     }
 }
