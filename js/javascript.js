@@ -43,8 +43,8 @@ function enlargePhoto(event) {
             state.selectedPhotoIndex = index;
         }
 
-        // setOverlayPhotoSrc(state.photos[index].url_o);
-        setOverlayPhotoSrc('./styles/pics/kyle3.jpg');
+        setOverlayPhotoSrc(state.photos[index].url_o);
+        //setOverlayPhotoSrc('./styles/pics/kyle3.jpg');
 
         $('body').find($('#overlay-photo')).fadeIn(400);
     }
@@ -52,7 +52,7 @@ function enlargePhoto(event) {
 
 // DOCS for the meat of this: http://www.developerdrive.com/2013/05/creating-a-jquery-gallery-for-flickr/
 (function( $ ) {
-    $.fn.flickr = function(options) {
+    $.fn.loadFlickrPhotos = function(options) {
         var url = 'https://api.flickr.com/services/rest/?jsoncallback=?';
 
         var settings = $.extend( {
@@ -65,13 +65,17 @@ function enlargePhoto(event) {
         return this.each(function() {
             var gallery = $(this);
             gallery.addClass('flickr-gallery');
-            gallery.append('<div class="viewport"></div><div class="browser"><ul></ul></div><div class="clear"></div>');
+            gallery.append(
+                '<div class="browser">' +
+                    '<ul class=' + settings.classes + '></ul>' +
+                '</div>'
+            );
 
             $.getJSON(url, {
                 method: 'flickr.photosets.getPhotos', // DOCS https://www.flickr.com/services/api/flickr.photosets.getPhotos.html
                 api_key: settings.api_key,
                 user_id: settings.user_id,
-                photoset_id: '72157704053325964',
+                photoset_id: settings.photoset_id,
                 format: 'json',
                 extras: 'url_q,url_m,url_z, url_o, date_taken,tags' // DOCS photo size options https://www.flickr.com/services/api/misc.urls.html
             }).success(function(response) {
@@ -120,5 +124,18 @@ $(document).keyup(function(e) {
 });
 
 $(document).on('ready', function(){
-    $('div#gallery').flickr({ photoset_id: '72157626766436507'});
+    if (window.location.pathname.includes('index')){
+        // load index featured photos album
+        $('div#gallery').loadFlickrPhotos({ 
+            photoset_id: '72157704053325964',
+            per_page: 9,
+            classes: 'rectangles'
+        });
+    } else if(window.location.pathname.includes('portfolio')){
+        // load portfolio photos album
+        $('div#gallery').loadFlickrPhotos({ 
+            photoset_id: '72157708286336705',
+            classes: 'squares'
+        });
+    }
 });
