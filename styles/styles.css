@@ -34,18 +34,36 @@ body {
 #gallery ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
     margin: 0;
 }
 
+#gallery ul.uniform {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* DOCS https://css-tricks.com/seamless-responsive-photo-grid/ */
+#gallery ul.ragged {
+    column-count: 4;
+    line-height: 0;
+    column-gap: .5rem;
+}
+
 #gallery ul li {
-    width: 33.33%;
     text-align: center;
+}
+
+#gallery ul.uniform li {
+    width: 33.33%;
     padding-bottom: 1rem;
 }
 
-#gallery img {
+#gallery ul.ragged img {
+    width: 100%;
+    padding: 0 0 .5rem 0;
+}
+
+#gallery ul.uniform img {
     width: calc(100% - 1rem);
     padding: 0 .5rem;
 }
@@ -73,8 +91,14 @@ footer .copyright {
     .content {
         width: 98%;
     }
-    #gallery ul li {
+    #gallery ul.uniform li {
         width: 100%;
         padding-bottom: .5rem;
+    }
+    #gallery ul.ragged {
+        column-gap: .25rem;
+    }
+    #gallery ul.ragged img {
+        padding-bottom: .25rem;
     }
 }
