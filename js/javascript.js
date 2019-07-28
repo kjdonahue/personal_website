@@ -129,13 +129,13 @@ $(document).on('ready', function(){
         $('div#gallery').loadFlickrPhotos({ 
             photoset_id: '72157704053325964',
             per_page: 9,
-            classes: 'rectangles'
+            classes: 'uniform'
         });
     } else if(window.location.pathname.includes('portfolio')){
         // load portfolio photos album
         $('div#gallery').loadFlickrPhotos({ 
             photoset_id: '72157708286336705',
-            classes: 'squares'
+            classes: 'ragged'
         });
     }
 });
