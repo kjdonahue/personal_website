@@ -96,7 +96,7 @@ footer .copyright {
         padding-bottom: .5rem;
     }
     #gallery ul.ragged {
-        column-gap: .25rem;
+        column-count: 1;
     }
     #gallery ul.ragged img {
         padding-bottom: .25rem;
