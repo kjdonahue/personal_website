@@ -103,6 +103,21 @@ function enlargePhoto(event) {
     };
 })( jQuery );
 
+function loadIndexImages() {
+    $('div#gallery').loadFlickrPhotos({ 
+            photoset_id: '72157704053325964',
+            per_page: 9,
+            classes: 'uniform'
+        });
+}
+
+function loadPortfolioImages() {
+     $('div#gallery').loadFlickrPhotos({ 
+            photoset_id: '72157708286336705',
+            classes: 'ragged'
+        });
+}
+
 // handle keypress events if enlarged photo is showing
 $(document).keyup(function(e) {
     if (document.getElementById('overlay-photo').style.display === 'block') {
@@ -120,22 +135,5 @@ $(document).keyup(function(e) {
                 navigateRight();
                 break;
         }
-    }
-});
-
-$(document).on('ready', function(){
-    if (window.location.pathname.includes('index')){
-        // load index featured photos album
-        $('div#gallery').loadFlickrPhotos({ 
-            photoset_id: '72157704053325964',
-            per_page: 9,
-            classes: 'uniform'
-        });
-    } else if(window.location.pathname.includes('portfolio')){
-        // load portfolio photos album
-        $('div#gallery').loadFlickrPhotos({ 
-            photoset_id: '72157708286336705',
-            classes: 'ragged'
-        });
     }
 });
